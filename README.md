@@ -9,4 +9,5 @@ Our work will be done under the "project" directory
 - press load unpacked and load the "projects" folder only
 - scroll down to all extensions
 - pin it to the tool bar and open
+- save and reload to view your new changes :D
 
