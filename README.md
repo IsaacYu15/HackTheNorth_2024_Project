@@ -5,7 +5,7 @@
 ## LAUNCHING THE PROJECT
 [using react & chrome extension + also how to launch :D](https://www.linkedin.com/pulse/how-create-chrome-extension-using-reactjs-sonu-kumar-cdqrc/)
 
-# TLDR
+### TLDR
 set up:
 - npm run build
 - drag into load unpacked
