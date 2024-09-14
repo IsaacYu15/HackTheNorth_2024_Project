@@ -1,5 +1,6 @@
 import "./navbar.css";
 import data from "./data";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -11,8 +12,7 @@ const Navbar = () => {
             data.map((item) => (
               <div className="route_container">
                   <li key={item.id}>
-                    <a className="routes" href={item.link}>{item.title}</a>
-                    <div className="underline"></div>
+                    <Link to={item.link}>{item.title}</Link>
                   </li>
               </div>
 

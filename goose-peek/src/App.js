@@ -1,11 +1,20 @@
-import './App.css';
-import Landing from "./sections/landing/Landing"
+import React from 'react';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+
+import Landing from './sections/landing/Landing.jsx';
+import Stats from './sections/stats/Stats.jsx';
+import Task from './sections/task/Task.jsx';
+import data from './sections/navbar/data.js';
 
 function App() {
   return (
-    <div className="App">
-      <Landing/>
-    </div>
+    <Router>
+      <Routes>
+        <Route path={data[0].link} element={<Landing />} />
+        <Route path={data[1].link} element={<Task />} />
+        <Route path={data[2].link} element={<Stats />} />
+      </Routes>
+    </Router>
   );
 }
 
