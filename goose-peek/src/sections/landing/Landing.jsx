@@ -1,24 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { View, Switch, StyleSheet } from 'react-native';
 import Navbar from '../navbar/Navbar.jsx';
 import './landing.css';
-// import background from '../../../public/background.js';
 
 const Landing = () => {
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
 
-  // useEffect(()=>{
-  //   console.log ("hello world");
-  //   background()
-  // }, [])
-
   return (
     <section className='landing_container'>
-      <h1>GOOSE PEEK</h1>
+      <h1 className='title'>GOOSE PEEK</h1>
       <img id='logo' src={process.env.PUBLIC_URL + '/geese.jpg'} alt="logo" />
-      <p>Are you ready to lock in my little gooling?</p>
-      <View style={styles.container}>
+      <p className='description'>Are you ready to lock in my little gooling?</p>
+      <View style={styles.switchContainer}>
         <Switch
           trackColor={{ false: '#767577', true: '#81b0ff' }}
           thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
@@ -29,13 +23,12 @@ const Landing = () => {
       </View>
       <Navbar />
     </section>
-
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  switchContainer: {
+    marginTop: 20,
     alignItems: 'center',
     justifyContent: 'center',
   },
