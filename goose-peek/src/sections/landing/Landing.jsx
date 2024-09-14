@@ -1,11 +1,17 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {View, Switch, StyleSheet} from 'react-native';
 import  Navbar from '../navbar/Navbar.jsx';
 import './landing.css';
+// import background from '../../../public/background.js';
 
 const Landing = () => {
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+
+  // useEffect(()=>{
+  //   console.log ("hello world");
+  //   background()
+  // }, [])
 
   return (
     <section id='landing_container'>
