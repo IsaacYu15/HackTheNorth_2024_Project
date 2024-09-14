@@ -15,3 +15,6 @@ check changes:
 - npm run build and reload the extension 
 - npm run start to test the extension it as a website
 
+## PREQ
+- React
+- React-native
