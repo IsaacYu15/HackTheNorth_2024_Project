@@ -4,6 +4,14 @@
 
 ## LAUNCHING THE PROJECT
 [using react & chrome extension + also how to launch :D](https://www.linkedin.com/pulse/how-create-chrome-extension-using-reactjs-sonu-kumar-cdqrc/)
-- npm run build, drag into load unpacked, test in browser. After that, just npm run build and reload the extension to see changes
+
+# TLDR
+set up:
+- npm run build
+- drag into load unpacked
+- pin it in your browsertest in browser.
+
+check changes:
+- npm run build and reload the extension 
 - npm run start to test the extension it as a website
 
