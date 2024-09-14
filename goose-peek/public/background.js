@@ -9,6 +9,6 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.content) {
-      console.log("Content of the page:", message.content);
+      console.log(message.content);
     }
 });
