@@ -12,7 +12,7 @@ const Navbar = () => {
             data.map((item) => (
               <div className="route_container">
                   <li key={item.id}>
-                    <Link to={item.link}>{item.title}</Link>
+                    <Link className="routes" to={item.link}>{item.title}</Link>
                   </li>
               </div>
 

@@ -4,7 +4,7 @@ import Navbar from '../navbar/Navbar.jsx';
 const Stats = () => {
 
   return (
-    <section id='stats_container'>
+    <section className='stats_container'>
         <h1>Stats</h1>
         <Navbar/>
     </section>

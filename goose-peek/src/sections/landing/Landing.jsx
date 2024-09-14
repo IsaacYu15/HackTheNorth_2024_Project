@@ -14,7 +14,7 @@ const Landing = () => {
   // }, [])
 
   return (
-    <section id='landing_container'>
+    <section className='landing_container'>
         <h1>GOOSE PEEK</h1>
         <img id='logo' src={process.env.PUBLIC_URL + '/geese.jpg'} alt="logo" />
         <p>Are you ready to lock in my little goosling?</p>

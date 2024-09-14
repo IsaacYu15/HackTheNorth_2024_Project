@@ -1,10 +1,10 @@
-import './task.css';
 import  Navbar from '../navbar/Navbar.jsx'
+import './task.css';
 
 const Task = () => {
 
   return (
-    <section id='task_container'>
+    <section className='task_container'>
         <h1>Task</h1>
         <Navbar/>
     </section>

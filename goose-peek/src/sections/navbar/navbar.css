@@ -1,0 +1,22 @@
+.nav__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem; 
+    list-style: none; 
+    padding: 0;
+}
+
+.route_container {
+    display: flex;
+    justify-content: center;
+}
+
+.routes {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    text-align: center; 
+}
