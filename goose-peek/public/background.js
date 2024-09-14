@@ -1,8 +1,14 @@
-import {fetchVideoTitle} from './dataFetch.js';
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+    if (changeInfo.status === 'complete' && tab.url.includes('http')) {
+      chrome.scripting.executeScript({
+        target: { tabId: tabId },
+        files: ['content.js']
+      });
+    }
+  });
 
-console.log("hello");
-    fetchVideoTitle().then(title => {
-        console.log('Video Title:', title);
-    }).catch(error => {
-        console.log('Error:', error);
-    });
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    if (message.content) {
+      console.log("Content of the page:", message.content);
+    }
+});
