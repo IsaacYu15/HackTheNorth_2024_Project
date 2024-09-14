@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {View, Switch, StyleSheet} from 'react-native';
-import './Landing.css';
+import  Navbar from '../navbar/Navbar.jsx';
+import './landing.css';
 
 const Landing = () => {
   const [isEnabled, setIsEnabled] = useState(false);
@@ -20,6 +21,7 @@ const Landing = () => {
             value={isEnabled}
           />
         </View>
+        <Navbar/>
     </section>
 
   );
