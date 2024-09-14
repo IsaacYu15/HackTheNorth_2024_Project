@@ -1,4 +1,2 @@
-const pageContent = document.body.innerText || document.body.textContent;
-console.log("Page content:", pageContent);
+const pageContent = document.title;
 chrome.runtime.sendMessage({ content: pageContent });
-
