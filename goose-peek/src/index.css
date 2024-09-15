@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   min-width: 300px; 
   min-height: 500px; /*these are the max dimensions 800x600 anything beyond becomes a scroll bar*/
