@@ -1,6 +1,5 @@
 import React from 'react';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
-
 import Landing from './sections/landing/Landing.jsx';
 import Stats from './sections/stats/Stats.jsx';
 import Task from './sections/task/Task.jsx';

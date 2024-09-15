@@ -1,5 +1,4 @@
 import './geese.css';
-import Navbar from '../navbar/Navbar.jsx';
 import {Button} from 'react-native';
 import data from './data.js';
 
@@ -23,7 +22,6 @@ const Stats = () => {
         <img id='geese' src={process.env.PUBLIC_URL + data[angerLevel].path} alt="logo" />
 
         <Button onPress={decreaseAnger} title="calm goose"/>
-        <Navbar/>
         
     </section>
 
