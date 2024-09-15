@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { HiOutlinePencil } from "react-icons/hi";
+import { HiOutlineTrash } from "react-icons/hi";
+
 
 const Task = () => {
   const [task, setTask] = useState([]);
@@ -45,10 +48,13 @@ const Task = () => {
     const updatedTasks = task.filter((item) => item.id !== id);
     updateLocalStorage(updatedTasks);
   };
+  const style = { color: "white", fontSize: "1rem" }
+
 
   return (
     <section className="rounded-md">
-      <div className="flex gap-10">
+      <div className="flex items-center justify-between">
+        <div className="flex-grow">
         <input
           type="text"
           className="flex p-2 rounded-md border-2"
@@ -56,26 +62,35 @@ const Task = () => {
           onChange={(e) => setTodo(e.target.value)}
           placeholder="Add a task..."
         />
-        <button className="p-2 rounded-md bg-tertiary cursor-pointer" onClick={handleAddTask}>+</button>
+        </div>
+        <button className="px-2 rounded-md bg-tertiary cursor-pointer text-lg flex flex-grow-0 justify-end" onClick={handleAddTask}>+</button>
       </div>
 
       <div className="todo-list">
         <ul>
           {task.map((item) => (
-            <li key={item.id} className="flex items-center m-3">
+            <li key={item.id} className="flex items-center my-5 justify-between">
+              <div className="flex items-center">
               <input type="radio" name="task-select" className="mr-2" />
               {editTaskId === item.id ? (
                 <input
                   type="text"
-                  value={editValue}
+                  value={editValue} 
                   onChange={(e) => setEditValue(e.target.value)}
                   onBlur={() => saveEdit(item.id)}
                 />
               ) : (
                 <span className="text-secondary font-body">{item.task}</span>
               )}
-              <button className="right-5" onClick={() => startEdit(item.id, item.task)}>✏️</button>
-              <button className="right-3" onClick={() => deleteTask(item.id)}>🗑️</button>
+              </div>
+              <div className="flex-grow float-right gap-1 flex justify-end">
+                
+              <button onClick={() => startEdit(item.id, item.task)}>
+                <HiOutlinePencil style={style}/>
+              </button>
+              <button onClick={() => deleteTask(item.id)}><HiOutlineTrash style={style}/>
+              </button>
+              </div>
             </li>
           ))}
         </ul>
