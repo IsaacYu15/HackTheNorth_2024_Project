@@ -21,6 +21,7 @@ const Task = () => {
   const updateLocalStorage = (updatedTasks) => {
     localStorage.setItem("todo", JSON.stringify(updatedTasks));
     setTask(updatedTasks);
+    console.log("yess");
   };
 
   // Add a new task
