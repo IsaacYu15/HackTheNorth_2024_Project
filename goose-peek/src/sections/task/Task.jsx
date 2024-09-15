@@ -62,8 +62,8 @@ const Task = () => {
       <div className="todo-list">
         <ul>
           {task.map((item) => (
-            <li key={item.id} className="flex items-center gap-10 p-5">
-              <input type="radio" name="task-select" />
+            <li key={item.id} className="flex items-center m-3">
+              <input type="radio" name="task-select" className="mr-2" />
               {editTaskId === item.id ? (
                 <input
                   type="text"
@@ -72,10 +72,10 @@ const Task = () => {
                   onBlur={() => saveEdit(item.id)}
                 />
               ) : (
-                <span className="text-secondary">{item.task}</span>
+                <span className="text-secondary font-body">{item.task}</span>
               )}
-              <button onClick={() => startEdit(item.id, item.task)}>✏️</button>
-              <button onClick={() => deleteTask(item.id)}>🗑️</button>
+              <button className="right-5" onClick={() => startEdit(item.id, item.task)}>✏️</button>
+              <button className="right-3" onClick={() => deleteTask(item.id)}>🗑️</button>
             </li>
           ))}
         </ul>
