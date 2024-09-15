@@ -1,44 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import { View, Switch, StyleSheet } from 'react-native';
-import Navbar from '../navbar/Navbar.jsx';
+import React from 'react';
 import './landing.css';
-// import background from '../../../public/background.js';
+import Task from '../task/Task.jsx';
+import data from '../geese/data.js';
+
 
 const Landing = () => {
-  const [isEnabled, setIsEnabled] = useState(false);
-  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
-
-  // useEffect(()=>{
-  //   console.log ("hello world");
-  //   background()
-  // }, [])
-
   return (
-    <section className='landing_container'>
-      <h1>GOOSE PEEK</h1>
-      <img id='logo' src={process.env.PUBLIC_URL + '/geese.jpg'} alt="logo" />
-      <p>Are you ready to lock in my little gooling?</p>
-      <View style={styles.container}>
-        <Switch
-          trackColor={{ false: '#767577', true: '#81b0ff' }}
-          thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
-          ios_backgroundColor="#3e3e3e"
-          onValueChange={toggleSwitch}
-          value={isEnabled}
-        />
-      </View>
-      <Navbar />
-    </section>
+    <div className='bg-primary p-8 font-iregular h-screen rounded-sm'>
+      <div className="flex flex-row">
+      <div className="flex flex-col">
+      <h1 className='font-body text-2xl text-secondary left-10'>Goose</h1>
+      <h1 className='font-body text-2xl text-secondary left-10'>Peek</h1>
+      </div>
 
+      <img id='logo' src={process.env.PUBLIC_URL + data[0].path} alt="logo" />
+      </div>
+      
+      <p className='text-secondary mb-4 font-body'>Ready to lock in?</p>
+      <Task />
+    </div>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
 
 export default Landing;

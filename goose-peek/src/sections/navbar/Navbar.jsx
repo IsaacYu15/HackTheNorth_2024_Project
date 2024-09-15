@@ -1,24 +1,24 @@
 import "./navbar.css";
 import data from "./data";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
-  return (
-    //ul is for bullet point list in which order does not matter
-    <nav>
-        <ul className="nav__menu">
-          {
-            //iterate through all the items in data, setting the link to the name
-            data.map((item) => (
-              <div className="route_container">
-                  <li key={item.id}>
-                    <Link className="routes" to={item.link}>{item.title}</Link>
-                  </li>
-              </div>
+  const location = useLocation(); // To get the current path
 
-            ))
-          }
-        </ul>
+  return (
+    <nav>
+      <ul className="nav__menu">
+        {data.map((item) => (
+          <li key={item.id} className="flex justify-center rounded-lg bg-slate-300">
+            <Link
+              className = "flex items-center" 
+              to={item.link}
+            >
+              {item.title}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </nav>
   );
 };
