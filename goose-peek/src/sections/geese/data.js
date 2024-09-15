@@ -6,4 +6,4 @@ const data = [
     { id: 4, path: "/geese-moods/5.jpg"},
 ];
   
-  export default data;
+export default data;

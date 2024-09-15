@@ -8,7 +8,11 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   });
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-    if (message.content) {
+    if (message.type === 'TASKS_UPDATE') {
+      console.log('Updated tasks:', message.payload);
+      // You can now use the task data here
+    }
+    else if (message.content) {
       console.log(message.content);
     }
 });
