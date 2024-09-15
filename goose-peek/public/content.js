@@ -18,6 +18,7 @@ options = {
         "Authorization": "Bearer fQJJWiAjAOIWzI9FEwSjpDXpuxIx25wYQbivXW0b",
         "Request-Source": "sandbox-condense"
     },
+
     "body": JSON.stringify({
         "message": `${pageContent}`,
         "preamble": "This message is a title of a page the user is on. Based on this title, is the potential content on this page related to the user's goals of studying math?" +
