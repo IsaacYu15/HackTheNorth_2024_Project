@@ -7,7 +7,7 @@
 
 body {
   min-width: 300px; 
-  min-height: 500px; /*these are the max dimensions 800x600 anything beyond becomes a scroll bar*/
+  min-height: 500px; 
   position: relative;
   vertical-align:middle;
 }
