@@ -13,7 +13,7 @@ const Landing = () => {
       <h1 className='font-body text-3xl text-secondary left-10'>Peek</h1>
       </div>
 
-      <img id='logo' src={process.env.PUBLIC_URL + data[0].path} alt="logo" />
+      <img className="top-2" src={process.env.PUBLIC_URL + data[0].path} alt="logo" />
       </div>
       
       <p className='text-secondary mb-4 font-body text-xl'>Ready to lock in?</p>
